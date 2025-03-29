@@ -1,0 +1,35 @@
+<app-account-wrapper>
+    <div class="my-auto">
+        <!-- title-->
+        <h4 class="mt-0">Entrar</h4>
+        <p class="text-muted mb-4">
+            Digite seu endereço de e-mail e senha para acessar a conta.
+        </p>
+
+        <!-- form -->
+        <form action="#" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label class="form-label" for="emailaddress">Email</label>
+                <input class="form-control" id="emailaddress" formControlName="emailaddress" placeholder="Insira seu email" required="" type="email"/>
+            </div>
+            <div class="mb-3">
+                <a class="text-muted float-end" routerLink="/pages-recoverpw-2"><small>Esqueceu sua Senha?</small></a>
+                <label class="form-label" for="password">Senha</label>
+                <input class="form-control" id="password" formControlName="password" placeholder="Insira sua senha" required=""
+                       type="password"/>
+            </div>
+            <div class="mb-3">
+                <div class="form-check">
+                    <input class="form-check-input" id="checkbox-signin" type="checkbox"/>
+                    <label class="form-check-label" for="checkbox-signin">Remember me</label>
+                </div>
+            </div>
+            <div class="d-grid mb-0 text-center">
+                <button class="btn btn-primary" type="submit">
+                    <i class="mdi mdi-login"></i> Conecte-se
+                </button>
+            </div>
+        </form>
+        <!-- end form-->
+    </div>
+</app-account-wrapper>
