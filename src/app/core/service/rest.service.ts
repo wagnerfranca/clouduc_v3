@@ -17,16 +17,20 @@ export class RestService {
     }
 
     postAuthLogin(data: any): Observable<any> {
-        return this.http.post(GlobalComponent.auth_login, {
-            headers: new HttpHeaders({
-                'Content-Type': 'application/json',
-                Authorization: `Bearer ${sessionStorage.getItem('access_token')}`,
-            }),
-        });
+        return this.http.post(
+            GlobalComponent.auth_login,
+            data,
+            {
+                headers: new HttpHeaders({
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${sessionStorage.getItem('access_token')}`,
+                }),
+            }
+        );
     }
 
     getAllUsers(): Observable<any> {
-        return this.http.get(GlobalComponent.getAllUSers, {
+        return this.http.get(GlobalComponent.getAllUsers, {
             headers: new HttpHeaders({
                 'Content-Type': 'application/json',
                 Authorization: `Bearer ${sessionStorage.getItem('access_token')}`,

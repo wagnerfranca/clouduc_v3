@@ -7,6 +7,6 @@ export const GlobalComponent = {
 
 
     //users
-    getAllUSers: '/api/v1/manager/users'
+    getAllUsers: '/api/v1/manager/users'
 
 }
